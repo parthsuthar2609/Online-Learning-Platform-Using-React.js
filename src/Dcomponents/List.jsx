@@ -35,7 +35,7 @@ const initialPeople = [
     lastName: 'Smith',
     email: 'jane.smith@example.com',
     phone: '098-765-4321',
-    category: 'Majdoor',
+    category: 'TECH',
   },
 ];
 
