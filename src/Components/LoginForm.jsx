@@ -16,10 +16,34 @@ const LoginForm = () => {
     const formik = useFormik({
         initialValues: initialValues,
         validationSchema: signupSchema,
-        onSubmit: (values) => {
+        onSubmit: async (values , event) => {
             console.log(values);
-            navigate('/dashboard');
-        }
+            navigate("/dashboard")
+            event.preventDefault();
+            try {
+              const res = await fetch(
+                "https://online-learning-platefor-8aefc-default-rtdb.firebaseio.com/Login.json",
+                {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify(values),
+                }
+              );
+          
+              if (res.ok) {
+                console.log("Data stored successfully!");
+                alert("Data Stored");
+              } else {
+                console.error("Failed to store data:", res.status, res.statusText);
+                alert("Failed to store data");
+              }
+            } catch (error) {
+              console.error("Error storing data:", error);
+              alert("An error occurred while storing data");
+            }
+          }
     });
 
     return (
@@ -32,14 +56,14 @@ const LoginForm = () => {
                     width={50}
                     alt=""
                 />
-                <span className="text-2xl whitespace-pre">Fireball</span>
+                <span className="text-2xl whitespace-pre ">Fireball</span>
                 <p className='main-font mt-5'>Hi, Welcome back</p>
             </div>
             <div className='flex justify-center items-center flex-wrap'>
                 <img src='./src/assets/SideImage.jpg' alt='Side view'></img>
                 <form className='form-data' onSubmit={formik.handleSubmit}>
                     <div className='data'>
-                        <h1 className='sign'>Sign in to Blog App</h1>
+                        <h1 className='sign'>Sign In to Learn</h1>
                         <h2 className='create'>New user?<Link to="/form"><span className='new-user'>Create an account</span></Link></h2>
                     </div>
                     <div>

@@ -47,7 +47,7 @@ const Edit = () => {
   };
 
   return (
-    <div className='flex justify-center items-start w-full p-5 bg-gray-100'>
+    <div className='flex justify-center items-start w-full p-5 bg-gray-100 mb-40'>
       <form className='bg-white p-8 rounded-lg shadow-2xl w-full max-w-6xl' onSubmit={handleSubmit}>
         <div className='flex flex-col lg:flex-row gap-6'>
           <div className='lg:w-1/3 text-center mb-6'>

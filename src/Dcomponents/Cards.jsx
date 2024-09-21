@@ -43,13 +43,49 @@ const users = [
     following: 6.98,
     totalPost: 8.49,
   },
+  {
+    name: 'Deja Brady',
+    position: 'Legal Counsel',
+    avatar: avatar3,
+    backgroundImage: background3,
+    follower: 9.12,
+    following: 6.98,
+    totalPost: 8.49,
+  },
+  {
+    name: 'Deja Brady',
+    position: 'Legal Counsel',
+    avatar: avatar3,
+    backgroundImage: background3,
+    follower: 9.12,
+    following: 6.98,
+    totalPost: 8.49,
+  },
+  {
+    name: 'Deja Brady',
+    position: 'Legal Counsel',
+    avatar: avatar3,
+    backgroundImage: background3,
+    follower: 9.12,
+    following: 6.98,
+    totalPost: 8.49,
+  },
+  {
+    name: 'Deja Brady',
+    position: 'Legal Counsel',
+    avatar: avatar3,
+    backgroundImage: background3,
+    follower: 9.12,
+    following: 6.98,
+    totalPost: 8.49,
+  },
   
 ];
 
 const UserCard = ({ user }) => {
   return (
-    <div className="p-4 m-4 bg-white shadow-lg rounded-lg">
-       <img src={user.backgroundImage} alt="background" className="w-full h-32 rounded-lg mt-2" />
+    <div className="p-4 m-4 bg-white shadow-lg rounded-lg ">
+       <img src={user.backgroundImage} alt="background" className="w-50 h-32 rounded-lg mt-2" />
       <img src={user.avatar} alt={user.name} className="rounded-full w-16 h-16 ml-16 mb-1" />
       <h2 className="mt-2 text-lg font-semibold text-center">{user.name}</h2>
       <p className="text-gray-600">{user.position}</p>

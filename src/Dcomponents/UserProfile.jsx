@@ -5,7 +5,7 @@ import SocialLinks from "./SocialLinks";
 
 const UserProfile = () => {
   return (
-    <div className="min-h-screen flex flex-col ml-20" style={{ height: '90vh' }}>
+    <div className="min-h-screen flex flex-col ml-20 mb-44" style={{ height: '90vh' }}>
       <div className="bg-white shadow-md rounded-lg overflow-hidden flex-1">
         <div
           className="bg-cover bg-center h-36 relative rounded-t-lg"
@@ -23,7 +23,7 @@ const UserProfile = () => {
         </div>
         <div className="p-4">
           <h2 className="text-2xl font-bold">Jaydon Frankie</h2>
-          <p className="text-gray-600">Data Analyst</p>
+          <p className="text-gray-600">Data Analyst Student</p>
         </div>
         <div className="border-t">
           <nav className="flex justify-around p-2">

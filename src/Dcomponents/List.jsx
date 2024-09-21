@@ -4,23 +4,23 @@ const initialPeople = [
   {
     id: 1,
     profileImage: 'https://via.placeholder.com/50',
-    firstName: 'John',
-    lastName: 'Doe',
-    email: 'john.doe@example.com',
+    firstName: 'Parth',
+    lastName: 'Suthar',
+    email: 'Parthsuthar589@gmail.com',
     phone: '123-456-7890',
     category: 'It',
   },
   {
     id: 2,
     profileImage: 'https://via.placeholder.com/50',
-    firstName: 'Jane',
+    firstName: 'Kishan',
     lastName: 'Smith',
     email: 'jane.smith@example.com',
     phone: '098-765-4321',
     category: 'Hr',
   },
   {
-    id: 2,
+    id: 3,
     profileImage: 'https://via.placeholder.com/50',
     firstName: 'Jane',
     lastName: 'Smith',
@@ -29,13 +29,13 @@ const initialPeople = [
     category: 'Software Developer',
   },
   {
-    id: 2,
+    id: 4,
     profileImage: 'https://via.placeholder.com/50',
     firstName: 'Jane',
     lastName: 'Smith',
     email: 'jane.smith@example.com',
     phone: '098-765-4321',
-    category: 'TECH',
+    category: 'Software Engineer',
   },
 ];
 
@@ -57,7 +57,7 @@ const List = () => {
   );
 
   return (
-    <div className="container mx-auto p-6">
+    <div className="p-6 mb-40">
       <h1 className="text-3xl font-extrabold text-gray-900 mb-6">People List</h1>
       
       <input
@@ -84,7 +84,7 @@ const List = () => {
           <tbody className="text-gray-700 text-sm font-light">
             {filteredPeople.map((person) => (
               <tr key={person.id} className="border-b border-gray-200 hover:bg-gray-100">
-                <td className="px-6 py-4">
+                <td className="px-4 py-4">
                   <img
                     src={person.profileImage}
                     alt={`${person.firstName} ${person.lastName}`}
@@ -97,12 +97,20 @@ const List = () => {
                 <td className="px-6 py-4">{person.phone}</td>
                 <td className="px-6 py-4">{person.category}</td>
                 <td className="px-6 py-4">
-                  <button
-                    onClick={() => handleDelete(person.id)}
-                    className="text-red-600 font-bold hover:text-red-900"
-                  >
-                    Delete
-                  </button>
+                  <div className="flex space-x-2">
+                    <button
+                      onClick={() => handleDelete(person.id)}
+                      className="text-slate-50 font-bold bg-red-600 py-2 px-4 rounded-md"
+                    >
+                      Delete
+                    </button>
+                    <button
+                      onClick={() => alert('Edit feature not implemented')}
+                      className="text-slate-50 font-bold bg-green-700 py-2 px-4 rounded-md"
+                    >
+                      Edit
+                    </button>
+                  </div>
                 </td>
               </tr>
             ))}

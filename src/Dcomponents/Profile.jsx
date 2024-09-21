@@ -3,7 +3,7 @@ import React from 'react';
 const Profile = () => {
   return (
 
-    <div className="container mx-3 mt- max-w-md mb-4">
+    <div className="container mx-3 mt- max-w-md mb-48">
       <div className="bg-white shadow-md rounded-lg p-4 mb-4">
         <div className="flex justify-between items-center text-center">
           <div>
@@ -37,7 +37,7 @@ const Profile = () => {
           <svg className="w-6 h-6 text-gray-600 mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path d="M2 21v-2c0-2.8 5.4-4 8-4s8 1.2 8 4v2H2zm8-16c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3z" />
           </svg>
-          <p>Data Analyst at <span className="font-bold">Gleichner, Mueller and Tromp</span></p>
+          <p>Data Analyst Student at <span className="font-bold">Gleichner, Mueller and Tromp</span></p>
         </div>
         <div className="flex items-center">
           <svg className="w-6 h-6 text-gray-600 mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
